@@ -1,0 +1,348 @@
+{
+  "title": "AI-Learn",
+  "subtitle": "AI 学习笔记 · 按学习路径组织",
+  "description": "围绕 LLM 应用工程的系统化学习笔记。已完成主题可点击进入；规划中的主题灰色显示，含优先级徽章。完整路线见 ROADMAP.md。",
+  "stages": [
+    {
+      "id": "preparation",
+      "step": 0,
+      "title": "准备",
+      "tagline": "可选前置",
+      "description": "已具备 Python + 基本 LLM 调用经验时可跳过；否则补一下底层与工程基础。",
+      "topics": [
+        "llm-fundamentals",
+        "python-for-ai"
+      ]
+    },
+    {
+      "id": "foundation",
+      "step": 1,
+      "title": "基础",
+      "tagline": "组件 + 链",
+      "description": "理解 LLM 应用最核心的抽象：Runnable、Prompt、Tool、LCEL 管道。任何上层设计都建立在这一层之上。",
+      "topics": [
+        "langchain",
+        "prompt-engineering",
+        "model-selection"
+      ]
+    },
+    {
+      "id": "orchestration",
+      "step": 2,
+      "title": "进阶编排",
+      "tagline": "状态 + 检索",
+      "description": "从无状态链到有状态图，从单次问答到检索增强——LLM 应用的两大主力场景。",
+      "topics": [
+        "langgraph",
+        "rag-advanced",
+        "multimodal",
+        "streaming-async"
+      ]
+    },
+    {
+      "id": "agent-systems",
+      "step": 3,
+      "title": "Agent 系统",
+      "tagline": "范式 + 协议",
+      "description": "Agent 设计原则、范式、多 Agent 协作、通信协议——和具体框架解耦的工程心智。",
+      "topics": [
+        "agents",
+        "agentic-rl",
+        "agent-projects"
+      ]
+    },
+    {
+      "id": "engineering",
+      "step": 4,
+      "title": "工程化",
+      "tagline": "评测 + 上线",
+      "description": "评测体系、可观测、CI、A/B、安全、成本——把 LLM 应用从 demo 推到生产，并持续迭代。",
+      "topics": [
+        "eval",
+        "llm-security",
+        "deployment",
+        "cost-optimization"
+      ]
+    },
+    {
+      "id": "model-layer",
+      "step": 5,
+      "title": "模型层",
+      "tagline": "微调 + 推理",
+      "description": "训练定制模型、自部署推理优化、理解架构——从「使用 LLM」走向「驾驭 LLM」。",
+      "topics": [
+        "fine-tuning",
+        "llm-inference",
+        "llm-architecture"
+      ]
+    },
+    {
+      "id": "verticals",
+      "step": 6,
+      "title": "垂直应用",
+      "tagline": "落地领域",
+      "description": "把通用能力打成具体产品形态——Coding、Browser、Data、Support 各有自己的工程模式。",
+      "topics": [
+        "coding-agent",
+        "browser-agent",
+        "data-agent",
+        "support-sales-agent"
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "slug": "langchain",
+      "title": "LangChain",
+      "summary": "LLM 应用的组件库与 LCEL 编排框架",
+      "tags": [
+        "框架",
+        "LCEL",
+        "Runnable",
+        "RAG"
+      ]
+    },
+    {
+      "slug": "langgraph",
+      "title": "LangGraph",
+      "summary": "基于图的有状态 LLM 应用编排框架",
+      "tags": [
+        "Agent",
+        "状态机",
+        "HITL",
+        "工作流"
+      ]
+    },
+    {
+      "slug": "rag-advanced",
+      "title": "RAG 进阶",
+      "summary": "从 Naive 到生产级：分块、混合检索、Rerank、Agentic RAG、评测",
+      "tags": [
+        "RAG",
+        "检索",
+        "Rerank",
+        "评测"
+      ]
+    },
+    {
+      "slug": "agents",
+      "title": "Agents · 智能体系统",
+      "summary": "Agent 设计原则、范式、模式（与具体框架解耦）",
+      "tags": [
+        "Agent",
+        "ReAct",
+        "Multi-Agent",
+        "MCP",
+        "Planning"
+      ]
+    },
+    {
+      "slug": "eval",
+      "title": "LLM Eval",
+      "summary": "LLM 应用评测体系：数据集、指标、Judge、CI、A/B、EDD",
+      "tags": [
+        "评测",
+        "LangSmith",
+        "RAGAS",
+        "CI"
+      ]
+    },
+    {
+      "slug": "llm-fundamentals",
+      "title": "LLM 基础",
+      "summary": "Tokenization、Transformer、采样、上下文窗口、模型生态",
+      "tags": [
+        "LLM",
+        "理论"
+      ],
+      "planned": true,
+      "priority": "P1",
+      "value": 3
+    },
+    {
+      "slug": "python-for-ai",
+      "title": "Python for AI",
+      "summary": "异步、生成器、Pydantic、性能、调试——AI 工程会用到的高级特性",
+      "tags": [
+        "Python",
+        "工程"
+      ],
+      "planned": true,
+      "priority": "P2",
+      "value": 2
+    },
+    {
+      "slug": "prompt-engineering",
+      "title": "Prompt 工程进阶",
+      "summary": "CoT、Few-shot、模板化、对抗 Prompt——所有 LLM 应用的「基本功」",
+      "tags": [
+        "Prompt",
+        "CoT",
+        "Few-shot"
+      ]
+    },
+    {
+      "slug": "model-selection",
+      "title": "模型选型与对比",
+      "summary": "怎么在一堆模型里给具体任务选对的：速度 / 价格 / 质量 / 工具支持",
+      "tags": [
+        "选型",
+        "Embedding",
+        "评测"
+      ],
+      "planned": true,
+      "priority": "P1",
+      "value": 3
+    },
+    {
+      "slug": "multimodal",
+      "title": "多模态",
+      "summary": "VLM、文档理解、图表、音频、视频、多模态 RAG / Agent",
+      "tags": [
+        "VLM",
+        "OCR",
+        "音视频",
+        "多模态 RAG"
+      ]
+    },
+    {
+      "slug": "streaming-async",
+      "title": "流式与异步深度",
+      "summary": "SSE / WebSocket、并发控制、背压、流式 UI",
+      "tags": [
+        "流式",
+        "异步",
+        "性能"
+      ],
+      "planned": true,
+      "priority": "P2",
+      "value": 2
+    },
+    {
+      "slug": "agentic-rl",
+      "title": "Agentic RL 深度",
+      "summary": "训练专用 Agent 模型：SFT / DPO / GRPO / 过程监督",
+      "tags": [
+        "RL",
+        "DPO",
+        "GRPO",
+        "微调"
+      ]
+    },
+    {
+      "slug": "agent-projects",
+      "title": "Agent 实战项目集",
+      "summary": "Travel / Deep Research / 客服 / Code Review / Data Agent 端到端",
+      "tags": [
+        "实战",
+        "案例"
+      ]
+    },
+    {
+      "slug": "llm-security",
+      "title": "LLM 安全",
+      "summary": "Prompt 注入、Jailbreak、数据泄漏、红队、防御工具、合规",
+      "tags": [
+        "安全",
+        "红队",
+        "合规"
+      ]
+    },
+    {
+      "slug": "deployment",
+      "title": "部署进阶",
+      "summary": "Docker / K8s / Serverless / LangGraph Server / 监控 / 容灾 / CI-CD",
+      "tags": [
+        "部署",
+        "K8s",
+        "监控"
+      ]
+    },
+    {
+      "slug": "cost-optimization",
+      "title": "成本优化",
+      "summary": "Token 经济、模型路由、Prompt 缓存、批处理、按租户拆账",
+      "tags": [
+        "成本",
+        "缓存",
+        "Batch"
+      ]
+    },
+    {
+      "slug": "fine-tuning",
+      "title": "模型微调",
+      "summary": "SFT / LoRA / QLoRA / PEFT / 数据合成 / 评测 / 部署",
+      "tags": [
+        "微调",
+        "LoRA",
+        "SFT"
+      ]
+    },
+    {
+      "slug": "llm-inference",
+      "title": "推理与部署",
+      "summary": "vLLM / TGI / Llama.cpp / GGUF / 量化 / 调度 / 性能调优",
+      "tags": [
+        "推理",
+        "vLLM",
+        "量化"
+      ]
+    },
+    {
+      "slug": "llm-architecture",
+      "title": "LLM 架构",
+      "summary": "Transformer、RoPE、MoE、Mamba、多模态架构、现代设计选择",
+      "tags": [
+        "架构",
+        "Transformer",
+        "MoE"
+      ],
+      "planned": true,
+      "priority": "P1",
+      "value": 3
+    },
+    {
+      "slug": "coding-agent",
+      "title": "Coding Agent",
+      "summary": "Cursor / Claude Code / Devin 拆解 + 代码理解 / 生成 / 调试 / 审查",
+      "tags": [
+        "Coding",
+        "Agent",
+        "IDE"
+      ]
+    },
+    {
+      "slug": "browser-agent",
+      "title": "Browser / 自动化 Agent",
+      "summary": "浏览器自动化、Computer Use、Vision + DOM、错误恢复",
+      "tags": [
+        "Browser",
+        "Computer Use",
+        "RPA"
+      ]
+    },
+    {
+      "slug": "data-agent",
+      "title": "Data Analysis Agent",
+      "summary": "SQL Agent、Pandas、可视化、报告生成、多源数据",
+      "tags": [
+        "数据",
+        "SQL",
+        "BI"
+      ]
+    },
+    {
+      "slug": "support-sales-agent",
+      "title": "客服 / 销售 Agent",
+      "summary": "多轮对话、知识库 RAG、情绪识别、HITL、转人工",
+      "tags": [
+        "客服",
+        "销售",
+        "HITL"
+      ],
+      "planned": true,
+      "priority": "P2",
+      "value": 3
+    }
+  ]
+}
