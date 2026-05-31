@@ -16,6 +16,7 @@ LangGraph 学习笔记。
 8. [08 · 流式输出](./08-streaming.md) — `stream_mode` 全集 + SSE 协议
 9. [09 · 子图与多 Agent](./09-subgraphs.md) — Subgraph、Supervisor、Swarm、Hierarchical
 10. [10 · 部署](./10-deployment.md) — FastAPI / LangGraph Server / Platform / 上线 checklist
+11. [11 · 实战练习：从工作流到多 Agent 系统](./11-practical-scenarios.md) — 5 个由浅到深的实战案例 + 全套测试练习
 
 ## 资源
 
